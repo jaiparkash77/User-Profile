@@ -1,0 +1,54 @@
+.card{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: inherit;
+    color: #283252;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: inline-block;
+    width: 100%;
+    padding: 20px;    
+    border: 1px solid #e5e5e5;
+    transition: all .3s;
+}
+
+.is-primary{  
+    border-radius: 6px;  
+    background: #671cc9;
+    border-color: #671cc9;
+}
+
+.is-secondary{
+    border-radius: 10px;
+    background: #ff227d !important;
+    border-color: #ff227d !important;
+}
+
+.is-info{
+    border-radius: 16px;
+    background: #039be5 !important;
+    border-color: #039be5 !important;
+}
+
+.is-success{
+    border-radius: 6px;
+    background: #06d6a0 !important;
+    border-color: #06d6a0 !important;
+}
+
+.is-warning{
+    border-radius: 10px;
+    background: #faae42 !important;
+    border-color: #faae42 !important;
+}
+
+.is-danger{
+    border-radius: 16px;
+    background: #e62965 !important;
+    border-color: #e62965 !important;
+}

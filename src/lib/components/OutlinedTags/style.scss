@@ -1,0 +1,69 @@
+.tag{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+    box-sizing: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: .75rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 2.3;
+    height: 2.4em;
+    margin-bottom: .5rem;
+    border-radius: 9999px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: .5rem;
+    background: none !important;
+}
+
+.primary{
+    color: #671cc9;
+    border: 1px solid #671cc9;
+}
+
+.info{
+    color: #039be5;
+    border: 1px solid #039be5;
+}
+
+.success{
+    color: #06d6a0;
+    border: 1px solid #06d6a0;
+}
+
+.warning{
+    color: #faae42;
+    border: 1px solid #faae42;
+}
+
+.danger{
+    color: #e62965;
+    border: 1px solid #e62965;
+}
+
+.orange{
+    color: #ffa981;
+    border: 1px solid #ffa981;
+}
+
+.blue{
+    color: #37c3ff;
+    border: 1px solid #37c3ff;
+}
+
+.green{
+    color: #93e088;
+    border: 1px solid #93e088;
+}
+
+.purple{
+    color: #8269b2;
+    border: 1px solid #8269b2;
+}

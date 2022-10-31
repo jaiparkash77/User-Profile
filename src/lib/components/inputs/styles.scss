@@ -1,0 +1,347 @@
+$light-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+
+.field {
+    &.is-horizontal {
+        .field-label {
+            .label {
+                font-family: $font;
+                font-size: .9rem;
+                color: $light-text !important;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &.has-addons, &.is-grouped {
+        .control {
+            .button {
+                height: 38px;
+            }
+
+            .select {
+                height: 38px;
+
+                &.currency-select {
+                    select {
+                        font-family: $font;
+                        font-weight: 600;
+                    }
+                }
+
+                select {
+                    height: 38px;
+                }
+            }
+        }
+    }
+
+    &.has-textarea-addon {
+        .textarea {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
+            border-color: darken($fade-grey, 2%) !important;
+            box-shadow: $light-box-shadow;
+        }
+
+        .is-textarea-addon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 12px 8px;
+            background: $white;
+            border-radius: 0 0 4px 4px;
+            border: 1px solid darken($fade-grey, 2%);
+            border-top: none;
+            box-shadow: $light-box-shadow;
+        }
+    }
+
+    > label {
+        font-family: $font;
+        font-size: .9rem;
+        color: $light-text !important;
+    }
+}
+
+.input, .input:focus, .textarea, .textarea:focus {
+    box-shadow: none;
+}
+
+.input {
+    height: 38px;
+
+    //padding-bottom: 8px;
+    transition: all .3s;
+
+    &:focus {
+        border-color: darken($fade-grey, 4%);
+        box-shadow: $light-box-shadow;
+
+        &.is-primary-focus {
+            border-color: $primary !important;
+        }
+
+        &.is-success-focus {
+            border-color: $success !important;
+        }
+
+        &.is-info-focus {
+            border-color: $info !important;
+        }
+
+        &.is-warning-focus {
+            border-color: $warning !important;
+        }
+
+        &.is-danger-focus {
+            border-color: $danger !important;
+        }
+    }
+}
+
+%controller {
+    position: relative;
+    font-family: $font;
+    cursor: pointer;
+    padding: 1em;
+
+    &::selection {
+        background: transparent;
+    }
+
+    input + span {
+        position: relative;
+        top: -1px;
+        background: $white;
+        content: "";
+        display: inline-block;
+        margin: 0 .5em 0 0;
+        padding: 0;
+        vertical-align: middle;
+        width: 1.4em;
+        height: 1.4em;
+        border: 1px solid darken($fade-grey, 8%);
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+
+        &::after {
+            content: "";
+            display: block;
+            transform: scale(0);
+            transition: transform .2s;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &:hover input + span {
+            box-shadow: 0 2px 4px rgba(#000, 0.15);
+        }
+    }
+
+    input:active + span {
+        box-shadow: 0 4px 8px rgba(#000, 0.15);
+    }
+
+    input:focus + span {
+        //box-shadow: 0 0 0 3px lightblue;
+   
+    }
+
+    input:checked + span::after {
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    input {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        transition: all .3s;
+    }
+}
+
+.checkbox {
+    @extend %controller;
+
+    color: $light-text;
+
+    &:hover {
+        color: $light-text;
+    }
+
+    &.is-circle {
+        input + span {
+            border-radius: 50%;
+        }
+    }
+
+    &.is-solid {
+        input + span {
+            background: lighten($fade-grey, 3%);
+        }
+
+        &.is-primary {
+            input + span {
+                border-color: $primary;
+                background: $primary;
+
+                &:after {
+                    color: $white;
+                }
+            }
+        }
+
+        &.is-success {
+            input + span {
+                border-color: $success;
+                background: $success;
+
+                &:after {
+                    color: $white;
+                }
+            }
+        }
+
+        &.is-info {
+            input + span {
+                border-color: $info;
+                background: $info;
+
+                &:after {
+                    color: $white;
+                }
+            }
+        }
+
+        &.is-warning {
+            input + span {
+                border-color: $warning;
+                background: $warning;
+
+                &:after {
+                    color: $white;
+                }
+            }
+        }
+
+        &.is-danger {
+            input + span {
+                border-color: $danger;
+                background: $danger;
+
+                &:after {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.is-outlined {
+        &.is-primary {
+            input:checked + span {
+                border-color: $primary;
+            }
+
+            input + span {
+                &:after {
+                    color: $primary;
+                }
+            }
+        }
+
+        &.is-success {
+            input:checked + span {
+                border-color: $success;
+            }
+
+            input + span {
+                &:after {
+                    color: $success;
+                }
+            }
+        }
+
+        &.is-info {
+            input:checked + span {
+                border-color: $info;
+            }
+
+            input + span {
+                &:after {
+                    color: $info;
+                }
+            }
+        }
+
+        &.is-warning {
+            input:checked + span {
+                border-color: $warning;
+            }
+
+            input + span {
+                &:after {
+                    color: $warning;
+                }
+            }
+        }
+
+        &.is-danger {
+            input:checked + span {
+                border-color: $danger;
+            }
+
+            input + span {
+                &:after {
+                    color: $danger;
+                }
+            }
+        }
+    }
+
+    input + span {
+        border-radius: 2px;
+        transition: all .3s;
+
+        &::after {
+            background-size: contain;
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            content: "\f00c";
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            font-size: .7rem;
+        }
+    }
+}
+
+.textarea {
+    transition: all .3s;
+
+    &:focus {
+        border-color: darken($fade-grey, 4%);
+        box-shadow: $light-box-shadow;
+
+        &.is-primary-focus {
+            border-color: $primary !important;
+        }
+
+        &.is-success-focus {
+            border-color: $success !important;
+        }
+
+        &.is-info-focus {
+            border-color: $info !important;
+        }
+
+        &.is-warning-focus {
+            border-color: $warning !important;
+        }
+
+        &.is-danger-focus {
+            border-color: $danger !important;
+        }
+    }
+}

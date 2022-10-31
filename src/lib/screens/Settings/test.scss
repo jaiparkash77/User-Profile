@@ -1,0 +1,21 @@
+*{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: inherit;
+    color: #485fc7;
+    text-decoration: none;
+    position: relative;
+    width: calc(20% - 16px);
+    background: #fff;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    transition: all .3s;
+    cursor: pointer;
